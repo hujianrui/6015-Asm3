@@ -12,7 +12,7 @@
 #include <vector>
 #include <sstream>
 
-
+ 
 bool parallelogram(int x1, int y1, int x2, int y2, int x3, int y3){
     int len1 = pow((x2-x3),2) + pow((y2-y3),2);
     int len2 = pow((x1-0),2) + pow((y1-0),2);
