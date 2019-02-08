@@ -11,13 +11,15 @@
 
 bool validNumber(std::vector<std::string> data){
     if(data.size() != 6){
-        std::cout<<"error 1 : wrong input size"<<std::endl;
+        std::cout<<"error 1"<<std::endl;
+//        std::cout<<"error 1 : wrong input size"<<std::endl;
         return false;
     }
     for(std::string str: data) {
         for(char c: str) {
             if(!isdigit(c)) {
-                std::cout<<"error 1 : wrong input type"<<std::endl;
+                std::cout<<"error 1"<<std::endl;
+//                std::cout<<"error 1 : wrong input type"<<std::endl;
                 return false;
             }
         }
@@ -37,7 +39,8 @@ bool rangeNumber(int x1, int y1, int x2, int y2, int x3, int y3){
     if(x1 > 100 || x1 < 0 || y1 > 100 || y1 < 0 ||
        x2 > 100 || x2 < 0 || y2 > 100 || y2 < 0 ||
        x3 > 100 || x3 < 0 || y3 > 100 || y3 < 0 ){
-        std::cout<<"error 1 : out of range"<<std::endl;
+        std::cout<<"error 1"<<std::endl;
+//        std::cout<<"error 1 : out of range"<<std::endl;
         return false;
     }
     return true;
@@ -48,7 +51,8 @@ bool coincide(int x1, int y1, int x2, int y2, int x3, int y3){
        (x1 == x2 && y1 == y2) || (x1 == x3 && y1 == y3) ||
        (x2 == x3 && y2 == y3)
        ){
-        std::cout<<"error 2 : point coincide"<<std::endl;
+        std::cout<<"error 2"<<std::endl;
+//        std::cout<<"error 2 : point coincide"<<std::endl;
         return true;
     }
     return false;
@@ -68,7 +72,8 @@ bool cross(int x1, int y1, int x2, int y2, int x3, int y3){
     &&
     ((-x1)*(y2-y1) - (-y1)*(x2-x1)) * ((x3-x1)*(y2-y1) - (y3-y1)*(x2-x1)) < 0;
     if(CDcrossAB || ADcrossCB){
-        std::cout<<"error 3 : line cross"<<std::endl;
+        std::cout<<"error 3"<<std::endl;
+//        std::cout<<"error 3 : line cross"<<std::endl;
         return true;
     }
     return false;
@@ -86,7 +91,8 @@ bool colinear(int x1, int y1, int x2, int y2, int x3, int y3){
     //DAB on line
     int check4 = x3 * (-y1) + x1 * y3;
     if(check1 == 0 || check2 == 0 || check3 == 0 || check4 == 0){
-        std::cout<<"error 4 : points colinear"<<std::endl;
+        std::cout<<"error 4"<<std::endl;
+//        std::cout<<"error 4 : points colinear"<<std::endl;
         return true;
     }
     return false;

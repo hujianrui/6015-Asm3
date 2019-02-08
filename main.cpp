@@ -27,7 +27,7 @@ int main(int argc, const char * argv[]) {
     
     //std::ifstream ins("data.txt");
     std::string str;
-    
+
     while(getline(std::cin,str)){
         std::vector<std::string> data = split(str,' ');
         if(validInput(data)){
@@ -36,5 +36,8 @@ int main(int argc, const char * argv[]) {
             std::cout<<result<<std::endl;
         }
     }
+    
+//    std::string result = checkShape(10,25,32,58,23,34);
+//    std::cout<<result<<std::endl;
     return 0;
 }
